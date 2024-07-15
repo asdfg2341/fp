@@ -31,15 +31,12 @@ def sellItem(names: List[String], quantities: List[Int], name: String, quantity:
 
 
 @main def main() =
-    // Define the initial inventory
     val names = List("Apples", "Bananas", "Oranges")
     var quantities = List(10, 5, 8)
 
-    // Example usage
     displayInventory(names, quantities)
     quantities = restockItem(names, quantities, "Apples", 5)
     displayInventory(names, quantities)
 
     quantities = sellItem(names, quantities, "Bananas", 2)
-    // sellItem("Oranges", 10)  # This should print a message about not enough stock
     displayInventory(names, quantities)
