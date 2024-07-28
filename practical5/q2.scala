@@ -36,14 +36,14 @@ class Library {
     library.addBook(Book("1984", "George Orwell", "978-0451524935"))
     library.addBook(Book("To Kill a Mockingbird", "Harper Lee", "978-0061120084"))
 
-    library.displayLibrary()
+    // library.displayLibrary()
 
     library.removeBookByISBN("978-0451524935")
     library.displayLibrary()
 
-    println(library.isBookInLibrary("978-0061120084"))
+//     println(library.isBookInLibrary("978-0061120084"))
 
-    library.findBookByTitle("The Hobbit").foreach(book => println(s"Found: Title: ${book.title}, Author: ${book.author}, ISBN: ${book.isbn}"))
+    // library.findBookByTitle("Harry potter").foreach(book => println(s"Found: Title: ${book.title}, Author: ${book.author}, ISBN: ${book.isbn}"))
 
-    library.displayBooksByAuthor("J.R.R. Tolkien")
+//     library.displayBooksByAuthor("J.R.R. Tolkien")
 }
