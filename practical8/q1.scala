@@ -2,8 +2,7 @@ def encrypt(text: String, shift: Int): String = {
   text.map { char =>
     if (char.isLetter) {
       val base = if (char.isUpper) 'A' else 'a'
-      println(base)
-      ((char - base + shift) % 26 + base).toChar
+      ((char - base + shift) % 26 + base).toChar // circular shifting
     } else {
       char
     }
@@ -20,8 +19,8 @@ def cipher(text: String, shift: Int, operation: (String, Int) => String): String
 
 
 
-@main def main(): Unit = {
-  val plaintext = "Hello, World!"
+@main def main(args: String*): Unit = {
+  val plaintext = args.head
   val shift = 3
 
   val encryptedText = cipher(plaintext, shift, encrypt)
